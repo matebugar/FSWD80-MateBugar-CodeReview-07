@@ -1,0 +1,69 @@
+<div class="row bgForm">
+        <div  id="form" class="col-lg-8 col-md-8 offset-lg-2 offset-md-2">
+                <form [formGroup]="this.travelService.form" (ngSubmit)="onSubmit()">
+                        <input type="hidden" formControlName="$key">
+                        <div class="form-group">
+                                <label>City</label>
+                                <!-- we will add this class is-invalid with the help of [ngClass] directive
+                                this class will be applied when the form is submitted and we have a validation error regarding full name -->
+                                <input formControlName="cityName" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.cityName.errors}">
+                                <!-- now we will add an additional due to show the exact reason for the validation error so here we have the deal with this class invilid-feedback
+                                        only based on the same condition inside that -->
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.cityName.errors">
+                                    <label>This field is required</label></div>
+                        </div>
+
+                        <div class="form-group">
+                                <label>Duration</label>
+                                <!-- here we add the the invalid class based on the same condition for email and the possible error for this email control is due to the invalid email address -->
+                                <input formControlName="duration" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.duration.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.duration.errors">
+                                    <label>This field is required</label></div>
+                        </div>
+
+                        <div class="form-group">
+                                <label>Price</label>
+                                <input formControlName="price" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.price.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.price.errors">
+                                        <label *ngIf="formControls.price.errors.required">This field is required</label>
+                                        <label *ngIf="formControls.price.errors.minlength">at least 3 numbers</label>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                                <label>Description</label>
+                                <input formControlName="description" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.description.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.description.errors">
+                                        <label *ngIf="formControls.description.errors.required">This field is required</label>
+                                        <label *ngIf="formControls.description.errors.minlength">at least 30 characters</label>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                                <label>Type</label>
+                                <input formControlName="type" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.type.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.type.errors"><label>This field is required</label></div>
+                        </div>
+
+                        <div class="form-group">
+                                <label>Image</label>
+                                <input formControlName="image" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.image.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.image.errors"><label>This field is required</label></div>
+                        </div>
+
+                        <div class="form-group subBtn">
+                                <input type="submit" class="btn" value="Add to the list">
+                        </div>
+                </form>
+                <div class="alert alert-info" *ngIf="showSuccessMessage">
+        submitted successfully.
+        </div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+                <app-travel-list></app-travel-list>
+  </div>
+</div>

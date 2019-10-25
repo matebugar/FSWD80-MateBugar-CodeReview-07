@@ -1,0 +1,45 @@
+.bgForm {
+	background-image: url('https://cdn.pixabay.com/photo/2014/07/01/12/34/street-381227_960_720.jpg');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: -40px;
+}
+
+
+label {
+	font-size: 22px;
+	padding-left: 10px;
+	font-family: 'Libre Baskerville', serif;
+	font-style: italic;
+	margin-top: 20px;
+	color: white;
+	text-shadow: 3px 1px darkgrey;
+}
+
+input {
+	border: 2px solid black;
+	box-shadow: 5px 10px;
+}
+
+.subBtn {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.subBtn input {
+	color: black;
+	background-color: white;
+	box-shadow: none;
+	font-style: italic;
+	font-size: 20px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.subBtn input:hover {
+	color: white;
+	background-color: black;
+	box-shadow: none;
+}

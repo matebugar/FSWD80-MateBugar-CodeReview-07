@@ -1,0 +1,23 @@
+.formStyle {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	padding-left: 130px;
+}
+
+#card {
+	border: none;
+	text-align: center;
+	font-family: 'Libre Baskerville', serif;
+}
+
+#card img {
+	border-radius: 50%;
+	height: 320px;
+}
+.card-title {
+	font-family: 'Staatliches', cursive;
+}
+
+.list-group-item {
+	border: none;
+}

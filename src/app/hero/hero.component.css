@@ -1,0 +1,10 @@
+.jumbotron {
+	background-color: lightgrey;
+	background-image:url('/assets/agent.png');
+	background-repeat: no-repeat;
+ 	object-fit: cover;
+ 	height: 200px;
+ 	margin-top: 60px;
+ 	color: white;
+ 	font-family: 'Libre Baskerville', serif;
+}
